@@ -1,0 +1,72 @@
+Brainstorming:
+
+users
+-name
+-username
+-email
+-password
+-recipes
+-grocery list
+-occasions
+
+recipes
+-name
+-author
+-ingredients
+-instructions
+-pubic/private
+
+ingredients
+-name
+-quantity
+
+grocery list
+-user
+-ingredients
+
+
+
+Table Ideas
+
+users - holds info about each user. Each row will be a user
+-user_id
+-user_name
+-user_email
+-user_password
+-account_created
+
+recipes - holds info about each recipe. Each row is a recipe
+-recipe_id
+-recipe_name
+*recipe_author
+-recipe_instructions
+
+ingredients -
+-ingredient_id
+-ingredient_name
+
+* recipe_ingredient -
+-recipe_ingredient_id
+*ingredient_id
+-ingredient_qauantity
+*recipe_id
+
+groceries -
+-grocery_id
+*user_id
+
+* grocery_ingredient -
+-grocery_ingredient_id
+*ingredient_id
+-ingredient_qauantity
+*grocery_id
+
+occasions -
+-occasion_id
+-occcasion_name
+*user_id
+
+* occasion_recipes
+-occasion_recipe_id
+*occasion_id
+*recipe_id
